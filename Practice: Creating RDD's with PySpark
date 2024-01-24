@@ -1,0 +1,46 @@
+Practice: Creating RDD's with PySpark
+
+
+Press enter after typing each instruction below.
+
+Start a PySpark interactive:  pyspark .
+
+Take a look at the Spark session object: spark.
+
+Take a look at the Spark context object: sc.
+
+Create a list of numbers:  numbers = list(range(15)).
+
+Look at your list of numbers: numbers.
+
+Use the context to create a RDD named 'rdd': rdd = sc.parallelize(numbers).
+
+See the number of items: rdd.count().
+
+See the maximum item: rdd.max().
+
+See the minimum item: rdd.min().
+
+Check the mean: rdd.mean().
+
+Create a new RDD with the original values squared:  rdd2 = rdd.map(lambda x : x**2 )
+
+See the number of items: rdd2.count().
+
+See the maximum item: rdd2.max().
+
+See the minimum item: rdd2.min().
+
+Check the mean: rdd2.mean().
+
+Create a new RDD with only even values: even = rdd2.filter(lambda x : x % 2 == 0).
+
+See the number of items: even.count().
+
+See the maximum item: even.max().
+
+See the minimum item: even.min().
+
+Check the mean: even.mean().
+
+Look at the items contained in the RDD: even.collect().
